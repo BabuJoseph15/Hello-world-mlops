@@ -2,9 +2,9 @@ name: CI - Train and Save the model
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   matrix-pip:
@@ -39,4 +39,3 @@ jobs:
         with:
           name: ml-artifacts-${{ matrix.python }}-${{ github.run_id }}
           path: artifacts
-
